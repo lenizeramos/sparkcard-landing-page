@@ -3,6 +3,7 @@ import HowItWorksPage from "./components/HowItWorksPage";
 import HomePage from "./components/HomePage";
 import FeaturesPage from "./components/FeaturesPage";
 import TestimonialPage from "./components/TestimonialPage";
+import SecurityPage from "./components/SecurityPage";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
         <HowItWorksPage />
         <FeaturesPage />
         <TestimonialPage />
+        <SecurityPage />
       </div>
     </>
   );
