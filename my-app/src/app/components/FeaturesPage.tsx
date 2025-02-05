@@ -4,30 +4,30 @@ import Card from "./Card";
 const cardsContent = [
   {
     image: "/images/image1.jpg",
-    title: "Sign Up",
-    description: "Apply online in minutes",
+    title: "Smart Rewards",
+    description: "Earn cashback on everyday spending",
   },
   {
     image: "/images/image1.jpg",
-    title: "Get Your Card",
-    description: "Instant virtual card access",
+    title: "Transparent Fees",
+    description: "No annual fees, no hidden charges",
   },
   {
     image: "/images/image1.jpg",
-    title: "Start Earning Rewards",
-    description: "Cashback on everyday spending",
+    title: "Financial Education",
+    description: "Access to tips and tools for managing money",
   },
   {
     image: "/images/image1.jpg",
     title: "Build Credit",
-    description: "Improve your credit score over time",
+    description: "Report to credit bureaus to help build credit history",
   },
 ];
 
-const HowItWorksPage: React.FC = () => {
+const FeaturesPage: React.FC = () => {
   return (
-    <div className="min-h-screen w-full flex flex-col justify-center items-center bg-green-300">
-      <h1>How It Works</h1>
+    <div className="min-h-screen w-full flex flex-col justify-center items-center bg-pink-300">
+      <h1>Features & Benefits</h1>
       <div className="flex flex-wrap gap-4 justify-center">
         {cardsContent.map((card, index) => (
           <Card
@@ -42,4 +42,4 @@ const HowItWorksPage: React.FC = () => {
   );
 };
 
-export default HowItWorksPage;
+export default FeaturesPage;

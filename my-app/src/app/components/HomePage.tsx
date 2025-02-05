@@ -1,15 +1,15 @@
 import React from "react";
 
-const homeComponent = {
-  title: "Title 1",
-  description: "Description 1",
+const homeContent = {
+  title: "Build Your Credit and Earn Rewards, Hassle-Free",
+  description: "The Australian card for students and young adults: no hidden fees, real rewards.",
 };
 const HomePage: React.FC = () => {
   return (
-    <div className="h-[100vh] w-[100vw] flex justify-center">
-      <h1>{homeComponent.title}</h1>
-      <p>{homeComponent.description}</p>
-      <button>Get Started</button>
+    <div className="min-h-screen w-full flex flex-col justify-center items-center bg-blue-300">
+      <h1>{homeContent.title}</h1>
+      <p>{homeContent.description}</p>
+      <button className="bg-black text-white py-2 px-4 rounded-md hover:bg-gray-600 transition">Get Started</button>
     </div>
   );
 };
