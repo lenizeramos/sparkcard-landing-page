@@ -30,7 +30,7 @@ const SecurityPage: React.FC = () => {
         </div>
       </div>
       <div>
-        <image>XXXX</image>
+        <h4>XXXX</h4>
       </div>
     </div>
   );
