@@ -20,13 +20,16 @@ const SecurityPage: React.FC = () => {
     <div className="min-h-screen w-full flex flex-col justify-center items-center bg-green-300">
       <h1>Security & Trust</h1>
       <div>
-        
         <p>
           At SparkCard, we take your security seriously. Our state-of-the-art
           systems ensure your money and data are always protected.
         </p>
         <div className="flex flex-wrap gap-4 justify-center">
-          {cardsContent.map((card) => card.text)}
+          {cardsContent.map((card, index) => (
+            <div key={index}>
+              <p>{card.text}</p>
+            </div>
+          ))}
         </div>
       </div>
       <div>
