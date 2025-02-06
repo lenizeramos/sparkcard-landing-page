@@ -17,7 +17,7 @@ const TestimonialSection: React.FC<TestimonialSectionProps> = ({
   cardsContent,
 }) => {
   return (
-    <section className="min-h-screen w-full flex flex-col justify-center items-center bg-green-300">
+    <section className="min-h-screen w-full flex flex-col justify-center items-center bg-green-100">
       <H2Title titleLabel={title} />
       <div className="flex flex-wrap gap-4 justify-center">
         {cardsContent.map((card, index) => (

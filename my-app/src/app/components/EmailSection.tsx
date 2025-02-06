@@ -14,7 +14,7 @@ const EmailSection: React.FC<EmailSectionProps> = ({ h2, text, placeholder, butt
   return (
     <section
       id="email"
-      className="h-[75vh] w-full flex-1 flex flex-col justify-center items-center bg-gray-300"
+      className="h-[75vh] w-full flex-1 flex flex-col justify-center items-center bg-green-400"
     >
       <div className="w-[90%] flex flex-col ustify-center items-center">
         <H2Title titleLabel={h2} />

@@ -10,11 +10,16 @@ interface SecuritySectionProps {
   image: string;
 }
 
-const SecuritySection: React.FC<SecuritySectionProps> = ({title, text, features, image}) => {
+const SecuritySection: React.FC<SecuritySectionProps> = ({
+  title,
+  text,
+  features,
+  image,
+}) => {
   return (
-    <section className="min-h-screen w-full flex flex-col justify-center items-center bg-blue-300">
+    <section className="min-h-screen w-full flex flex-col justify-center items-center bg-gray-100">
       <H2Title titleLabel={title} />
-      <div className="flex flex-row ustify-evenly items-center w-[90%]">
+      <div className="flex flex-col lg:flex-row justify-evenly items-center w-[90%]">
         <div className="w-[80%]">
           <p className="mb-4 font-sans text-center">{text}</p>
           <div className="flex flex-col gap-4 justify-center">
@@ -33,9 +38,9 @@ const SecuritySection: React.FC<SecuritySectionProps> = ({title, text, features,
           <Image
             src={image}
             alt={title}
-            className="rounded-full bg-green-500 p-5 border border-black"
-            width={100}
-            height={100}
+            className="rounded-full bg-green-400 p-5 border border-black"
+            width={200}
+            height={200}
             objectFit="cover"
           />
         </div>

@@ -11,7 +11,7 @@ const PricingSection: React.FC<PricingSectionProps> = ({title, cardsContent}) =>
   return (
     <section
       id="pricing"
-      className="min-h-screen w-full flex flex-col justify-center items-center bg-green-300"
+      className="min-h-screen w-full flex flex-col justify-center items-center bg-green-100"
     >
       <H2Title titleLabel={title} />
       <div className="flex flex-wrap gap-4 justify-center">
