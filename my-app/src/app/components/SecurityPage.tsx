@@ -1,39 +1,41 @@
 import React from "react";
+import Image from "next/image";
 
-const cardsContent = [
-  {
-    text: "Bank-level encryption",
-  },
-  {
-    text: "Australian government guarantee for deposits",
-  },
-  {
-    text: "24/7 fraud monitoring",
-  },
-  {
-    text: "Instant card freeze via app",
-  },
-];
+const pageContent = {
+  h1: "Security & Trust",
+  text: "At SparkCard, we take your security seriously. Our state-of-the-art systems ensure your money and data are always protected.",
+  features: [
+    "Bank-level encryption",
+    "Australian government guarantee for deposits",
+    "24/7 fraud monitoring",
+    "Instant card freeze via app",
+  ],
+  image: "/images/image1.jpg",
+};
 
 const SecurityPage: React.FC = () => {
   return (
-    <div className="min-h-screen w-full flex flex-col justify-center items-center bg-green-300">
-      <h1>Security & Trust</h1>
+    <div className="min-h-screen w-full flex flex-col justify-center items-center bg-blue-300">
+      <h1>{pageContent.h1}</h1>
       <div>
-        <p>
-          At SparkCard, we take your security seriously. Our state-of-the-art
-          systems ensure your money and data are always protected.
-        </p>
+        <p>{pageContent.text}</p>
         <div className="flex flex-wrap gap-4 justify-center">
-          {cardsContent.map((card, index) => (
+          {pageContent.features.map((card, index) => (
             <div key={index}>
-              <p>{card.text}</p>
+              <p>{card}</p>
             </div>
           ))}
         </div>
       </div>
       <div>
-        <h4>XXXX</h4>
+        <Image
+          src={pageContent.image}
+          alt={pageContent.h1}
+          className="rounded-full"
+          width={80}
+          height={80}
+          objectFit="cover"
+        />
       </div>
     </div>
   );
