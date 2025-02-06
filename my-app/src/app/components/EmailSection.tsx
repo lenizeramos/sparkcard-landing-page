@@ -30,7 +30,6 @@ const EmailSection: React.FC = () => {
           <Button buttonLabel={sectionContent.buttonLabel} />
         </div>
       </div>
-
       <span className="text-sm">{sectionContent.span}</span>
     </section>
   );
