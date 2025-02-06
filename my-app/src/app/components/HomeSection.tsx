@@ -1,19 +1,22 @@
 import React from "react";
+import Button from "./Button";
 
 const sectionContent = {
   title: "Build Your Credit and Earn Rewards, Hassle-Free",
   description:
     "The Australian card for students and young adults: no hidden fees, real rewards.",
+  buttonLabel: "Get Started",
 };
 const HomeSection: React.FC = () => {
   return (
-    <div className="min-h-screen w-full flex flex-col justify-center items-center bg-blue-300">
+    <section
+      id="home"
+      className="min-h-screen w-full flex flex-col justify-center items-center bg-blue-300"
+    >
       <h1>{sectionContent.title}</h1>
       <p>{sectionContent.description}</p>
-      <button className="bg-black text-white py-2 px-4 rounded-md hover:bg-gray-600 transition">
-        Get Started
-      </button>
-    </div>
+      <Button buttonLabel={sectionContent.buttonLabel} />
+    </section>
   );
 };
 

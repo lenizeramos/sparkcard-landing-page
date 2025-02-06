@@ -6,14 +6,23 @@ import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
-  { name: "Home", href: "/" },
-  { name: "How it Works", href: "/how-it-works" },
-  { name: "Features", href: "/features" },
-  { name: "Pricing", href: "/pricing" },
+  { name: "Home", href: "#home" },
+  { name: "How it Works", href: "#how-it-works" },
+  { name: "Features", href: "#features" },
+  { name: "Pricing", href: "#pricing" },
+  { name: "Get Started", href: "#email" },
 ];
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
+
+  /* const scrollToEmailSection = () => {
+    const emailSection = document.getElementById('email');
+    if (emailSection) {
+      emailSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  }; */
+
   return (
     <nav className="bg-[#B4FCB6] shadow-md fixed w-full z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -35,9 +44,9 @@ function Navbar() {
                 {link.name}
               </Link>
             ))}
-              <button className="bg-gray-600 text-white py-2 px-4 rounded-md hover:bg-gray-700 transition">
-            Get Started
-          </button>
+            {/* <button className="bg-gray-600 text-white py-2 px-4 rounded-md hover:bg-gray-700 transition" onClick={scrollToEmailSection} >
+              Get Started
+            </button> */}
           </div>
 
           <button

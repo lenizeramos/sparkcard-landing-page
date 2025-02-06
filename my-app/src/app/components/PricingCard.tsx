@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "./Button";
 
 interface PricingCardProps {
   planName: string;
@@ -18,7 +19,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
   buttonLabel,
 }) => {
   return (
-    <div className="border border-gray-300 rounded-lg p-4 w-48 text-center flex-col">
+    <div className="border  border-white bg-white rounded-lg p-4 w-48 text-center flex-col">
       <h2 className="text-xl font-semibold mb-2">{planName} Plan</h2>
       <p className="text-gray-500 mb-4">{targetAudience}</p>
 
@@ -35,10 +36,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
           ))}
         </ul>
       </div>
-
-      <button className="bg-blue-500 text-white py-2 px-4 rounded-full hover:bg-blue-600">
-        {buttonLabel}
-      </button>
+      <Button buttonLabel={buttonLabel} />
     </div>
   );
 };

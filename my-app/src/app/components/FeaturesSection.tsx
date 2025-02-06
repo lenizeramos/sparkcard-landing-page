@@ -26,7 +26,7 @@ const cardsContent = [
 
 const FeaturesSection: React.FC = () => {
   return (
-    <div className="min-h-screen w-full flex flex-col justify-center items-center bg-pink-300">
+    <section id="features" className="min-h-screen w-full flex flex-col justify-center items-center bg-pink-300">
       <h1>Features & Benefits</h1>
       <div className="flex flex-wrap gap-4 justify-center">
         {cardsContent.map((card, index) => (
@@ -38,7 +38,7 @@ const FeaturesSection: React.FC = () => {
           />
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

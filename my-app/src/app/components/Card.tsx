@@ -9,7 +9,7 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ image, title, description }) => {
   return (
-    <div className="border border-gray-300 rounded-lg p-4 w-48 text-center">
+    <div className="border border-white bg-white rounded-lg p-4 w-48 text-center">
       <div className="mb-4">
         <Image
           src={image}
