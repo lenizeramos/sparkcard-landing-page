@@ -15,7 +15,7 @@ const sectionContent = {
 
 const SecuritySection: React.FC = () => {
   return (
-    <div className="min-h-screen w-full flex flex-col justify-center items-center bg-blue-300">
+    <section className="min-h-screen w-full flex flex-col justify-center items-center bg-blue-300">
       <h1>{sectionContent.h1}</h1>
       <div>
         <p>{sectionContent.text}</p>
@@ -37,7 +37,7 @@ const SecuritySection: React.FC = () => {
           objectFit="cover"
         />
       </div>
-    </div>
+    </section>
   );
 };
 

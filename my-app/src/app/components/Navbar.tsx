@@ -4,24 +4,18 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
+import Button from "./Button";
 
 const navLinks = [
   { name: "Home", href: "#home" },
   { name: "How it Works", href: "#how-it-works" },
   { name: "Features", href: "#features" },
   { name: "Pricing", href: "#pricing" },
-  { name: "Get Started", href: "#email" },
 ];
+
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
-
-  /* const scrollToEmailSection = () => {
-    const emailSection = document.getElementById('email');
-    if (emailSection) {
-      emailSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  }; */
 
   return (
     <nav className="bg-[#B4FCB6] shadow-md fixed w-full z-10">
@@ -40,46 +34,51 @@ function Navbar() {
                     ? "text-blue-700 font-semibold"
                     : "text-gray-800"
                 } hover:text-blue-600 transition-colors`}
+                aria-current={pathname === link.href ? "page" : undefined}
               >
                 {link.name}
               </Link>
             ))}
-            {/* <button className="bg-gray-600 text-white py-2 px-4 rounded-md hover:bg-gray-700 transition" onClick={scrollToEmailSection} >
-              Get Started
-            </button> */}
+            <Link href="#email">
+              <button className="bg-gray-600 text-white py-2 px-4 rounded-md hover:bg-gray-700 transition">
+                Get Started
+              </button>
+            </Link>
           </div>
 
           <button
             className="md:hidden text-gray-700 dark:text-white"
             onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle menu"
           >
             {isOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
         </div>
       </div>
 
-      {isOpen && (
-        <div className="md:hidden bg-[#B4FCB6] p-4 flex flex-col items-center space-y-4">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={`block text-center py-2 ${
-                pathname === link.href
-                  ? "text-blue-700 font-semibold"
-                  : "text-gray-800"
-              } hover:text-blue-600 transition-colors`}
-              onClick={() => setIsOpen(false)}
-            >
-              {link.name}
-            </Link>
-          ))}
-
-          <button className="bg-gray-600 text-white py-2 px-4 rounded-md hover:bg-gray-700 transition">
-            Get Started
-          </button>
-        </div>
-      )}
+      <div
+        className={`md:hidden bg-[#B4FCB6] p-4 flex flex-col items-center space-y-4 transition-all duration-300 ease-in-out transform ${
+          isOpen ? "translate-y-0 opacity-100" : "-translate-y-5 opacity-0"
+        }`}
+      >
+        {navLinks.map((link) => (
+          <Link
+            key={link.href}
+            href={link.href}
+            className={`block text-center py-2 ${
+              pathname === link.href
+                ? "text-blue-700 font-semibold"
+                : "text-gray-800"
+            } hover:text-blue-600 transition-colors`}
+            onClick={() => setIsOpen(false)}
+          >
+            {link.name}
+          </Link>
+        ))}
+        <Link href="#email">
+          <Button buttonLabel={"Get Started"} />
+        </Link>
+      </div>
     </nav>
   );
 }
