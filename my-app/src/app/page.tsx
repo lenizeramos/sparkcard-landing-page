@@ -6,6 +6,7 @@ import TestimonialPage from "./components/TestimonialPage";
 import SecurityPage from "./components/SecurityPage";
 import PricingPage from "./components/PricingPage";
 import EmailPage from "./components/EmailPage";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
         <PricingPage/>
         <EmailPage/>
       </div>
+      <Footer/>
     </>
   );
 }
