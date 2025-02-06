@@ -17,17 +17,21 @@ const EmailSection: React.FC = () => {
       <h2 className="text-4xl font-bold font-mono text-center mb-6">
         {sectionContent.h2}
       </h2>
-      <p>{sectionContent.text}</p>
-      <input
-        type="email"
-        name="emailInput"
-        id="emailInput"
-        placeholder={sectionContent.placeholder}
-      />
-      <div>
-        <Button buttonLabel={sectionContent.buttonLabel} />
+      <p className="mb-4">{sectionContent.text}</p>
+      <div className="flex flex-row gap-2 mb-4 w-[60%]">
+        <input
+          type="email"
+          name="emailInput"
+          id="emailInput"
+          placeholder={sectionContent.placeholder}
+          className="text-left pl-3 focus:outline-none focus:ring-2 focus:ring-gray-900 w-[65%]"
+        />
+        <div className="w-[35%]">
+          <Button buttonLabel={sectionContent.buttonLabel} />
+        </div>
       </div>
-      <span>{sectionContent.span}</span>
+
+      <span className="text-sm">{sectionContent.span}</span>
     </section>
   );
 };
