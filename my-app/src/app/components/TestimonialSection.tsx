@@ -1,5 +1,6 @@
 import React from "react";
 import TestimonialCard from "./TestimonialCard";
+import H2Title from "./H2Title";
 
 const cardsContent = [
   {
@@ -28,7 +29,7 @@ const cardsContent = [
 const TestimonialSection: React.FC = () => {
   return (
     <section className="min-h-screen w-full flex flex-col justify-center items-center bg-green-300">
-      <h2 className="text-4xl font-bold font-mono text-center mb-6" >What Our Users Say</h2>
+      <H2Title titleLabel={"What Our Users Say"} />
       <div className="flex flex-wrap gap-4 justify-center">
         {cardsContent.map((card, index) => (
           <TestimonialCard

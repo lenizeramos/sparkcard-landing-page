@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { CircleCheckBig } from "lucide-react";
+import H2Title from "./H2Title";
 
 const sectionContent = {
   h2: "Security & Trust",
@@ -17,16 +18,17 @@ const sectionContent = {
 const SecuritySection: React.FC = () => {
   return (
     <section className="min-h-screen w-full flex flex-col justify-center items-center bg-blue-300">
-      <h2 className="text-4xl font-bold font-mono text-center mb-6">
-        {sectionContent.h2}
-      </h2>
+      <H2Title titleLabel={sectionContent.h2} />
       <div className="flex flex-row ustify-evenly items-center w-[90%]">
         <div className="w-[80%]">
           <p className="mb-4 font-sans text-center">{sectionContent.text}</p>
           <div className="flex flex-col gap-4 justify-center">
             {sectionContent.features.map((card, index) => (
               <div key={index} className="flex">
-                <CircleCheckBig style={{ marginRight: "8px" }} className=" text-green-700"/>
+                <CircleCheckBig
+                  style={{ marginRight: "8px" }}
+                  className=" text-green-700"
+                />
                 <p>{card}</p>
               </div>
             ))}
