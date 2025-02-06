@@ -10,7 +10,7 @@ const sectionContent = {
 };
 const EmailSection: React.FC = () => {
   return (
-    <section id="email" className="min-h-screen w-full flex flex-col justify-center items-center bg-gray-300">
+    <section id="email" className="h-[75vh] w-full flex-1 flex flex-col justify-center items-center bg-gray-300">
       <h1>{sectionContent.h1}</h1>
       <p>{sectionContent.text}</p>
       <input
