@@ -2,54 +2,18 @@ import React from "react";
 import PricingCard from "./PricingCard";
 import H2Title from "./H2Title";
 
-const cardsContent = [
-  {
-    planName: "Basic",
-    targetAudience: "For students getting started",
-    price: "$0",
-    paymentCycle: "per month",
-    features: [
-      "No annual fee",
-      "1% cashback on all purchases",
-      "Virtual card access",
-    ],
-    buttonLabel: "Get Started",
-  },
-  {
-    planName: "Pro",
-    targetAudience: "For young professionals",
-    price: "$5",
-    paymentCycle: "per month",
-    features: [
-      "All Basic features",
-      "2% cashback on all purchases",
-      "Travel insurance",
-      "Priority customer support",
-    ],
-    buttonLabel: "Upgrade to Pro",
-  },
-  {
-    planName: "Premium",
-    targetAudience: "For power users",
-    price: "$10",
-    paymentCycle: "per month",
-    features: [
-      "All Pro features",
-      "3% cashback on all purchases",
-      "Concierge service",
-      "Extend warranty on purchases",
-    ],
-    buttonLabel: "Go Premium",
-  },
-];
+interface PricingSectionProps {
+  title: string;
+  cardsContent: Array<{ planName: string; targetAudience: string; price: string; paymentCycle: string; features: string[]; buttonLabel: string }>;
+}
 
-const PricingSection: React.FC = () => {
+const PricingSection: React.FC<PricingSectionProps> = ({title, cardsContent}) => {
   return (
     <section
       id="pricing"
       className="min-h-screen w-full flex flex-col justify-center items-center bg-green-300"
     >
-      <H2Title titleLabel={"Simple, Transparent Pricing"} />
+      <H2Title titleLabel={title} />
       <div className="flex flex-wrap gap-4 justify-center">
         {cardsContent.map((card, index) => (
           <PricingCard
