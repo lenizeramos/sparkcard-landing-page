@@ -5,6 +5,7 @@ import FeaturesPage from "./components/FeaturesPage";
 import TestimonialPage from "./components/TestimonialPage";
 import SecurityPage from "./components/SecurityPage";
 import PricingPage from "./components/PricingPage";
+import EmailPage from "./components/EmailPage";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         <TestimonialPage />
         <SecurityPage />
         <PricingPage/>
+        <EmailPage/>
       </div>
     </>
   );
