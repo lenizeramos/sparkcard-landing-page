@@ -25,7 +25,7 @@ const cardsContent = [
   },
 ];
 
-const TestimonialPage: React.FC = () => {
+const TestimonialSection: React.FC = () => {
   return (
     <div className="min-h-screen w-full flex flex-col justify-center items-center bg-green-300">
       <h1>What Our Users Say</h1>
@@ -44,4 +44,4 @@ const TestimonialPage: React.FC = () => {
   );
 };
 
-export default TestimonialPage;
+export default TestimonialSection;

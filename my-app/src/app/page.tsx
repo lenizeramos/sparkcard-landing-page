@@ -1,27 +1,25 @@
 import Navbar from "./components/Navbar";
-import HowItWorksPage from "./components/HowItWorksPage";
-import HomePage from "./components/HomePage";
-import FeaturesPage from "./components/FeaturesPage";
-import TestimonialPage from "./components/TestimonialPage";
-import SecurityPage from "./components/SecurityPage";
-import PricingPage from "./components/PricingPage";
-import EmailPage from "./components/EmailPage";
+import HowItWorksSection from "./components/HowItWorksSection";
+import HomeSection from "./components/HomeSection";
+import FeaturesSection from "./components/FeaturesSection";
+import TestimonialSection from "./components/TestimonialPage";
+import SecuritySection from "./components/SecuritySection";
+import PricingSection from "./components/PricingSection";
+import EmailSection from "./components/EmailSection";
 import Footer from "./components/Footer";
 
 export default function Home() {
   return (
     <>
       <Navbar />
-      <div className="wrapper">
-        <HomePage />
-        <HowItWorksPage />
-        <FeaturesPage />
-        <TestimonialPage />
-        <SecurityPage />
-        <PricingPage/>
-        <EmailPage/>
-      </div>
-      <Footer/>
+      <HomeSection />
+      <HowItWorksSection />
+      <FeaturesSection />
+      <TestimonialSection />
+      <SecuritySection />
+      <PricingSection />
+      <EmailSection />
+      <Footer />
     </>
   );
 }

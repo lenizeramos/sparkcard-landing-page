@@ -24,7 +24,7 @@ const cardsContent = [
   },
 ];
 
-const FeaturesPage: React.FC = () => {
+const FeaturesSection: React.FC = () => {
   return (
     <div className="min-h-screen w-full flex flex-col justify-center items-center bg-pink-300">
       <h1>Features & Benefits</h1>
@@ -42,4 +42,4 @@ const FeaturesPage: React.FC = () => {
   );
 };
 
-export default FeaturesPage;
+export default FeaturesSection;

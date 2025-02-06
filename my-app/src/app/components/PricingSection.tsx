@@ -7,7 +7,11 @@ const cardsContent = [
     targetAudience: "For students getting started",
     price: "$0",
     paymentCycle: "per month",
-    features: ["No annual fee", "1% cashback on all purchases", "Virtual card access"],
+    features: [
+      "No annual fee",
+      "1% cashback on all purchases",
+      "Virtual card access",
+    ],
     buttonLabel: "Get Started",
   },
   {
@@ -15,7 +19,12 @@ const cardsContent = [
     targetAudience: "For young professionals",
     price: "$5",
     paymentCycle: "per month",
-    features: ["All Basic features", "2% cashback on all purchases", "Travel insurance", "Priority customer support"],
+    features: [
+      "All Basic features",
+      "2% cashback on all purchases",
+      "Travel insurance",
+      "Priority customer support",
+    ],
     buttonLabel: "Upgrade to Pro",
   },
   {
@@ -23,12 +32,17 @@ const cardsContent = [
     targetAudience: "For power users",
     price: "$10",
     paymentCycle: "per month",
-    features: ["All Pro features", "3% cashback on all purchases", "Concierge service", "Extend warranty on purchases"],
+    features: [
+      "All Pro features",
+      "3% cashback on all purchases",
+      "Concierge service",
+      "Extend warranty on purchases",
+    ],
     buttonLabel: "Go Premium",
   },
 ];
 
-const PricingPage: React.FC = () => {
+const PricingSection: React.FC = () => {
   return (
     <div className="min-h-screen w-full flex flex-col justify-center items-center bg-green-300">
       <h1>Simple, Transparent Pricing</h1>
@@ -49,4 +63,4 @@ const PricingPage: React.FC = () => {
   );
 };
 
-export default PricingPage;
+export default PricingSection;

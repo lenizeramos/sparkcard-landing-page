@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-const pageContent = {
+const sectionContent = {
   h1: "Security & Trust",
   text: "At SparkCard, we take your security seriously. Our state-of-the-art systems ensure your money and data are always protected.",
   features: [
@@ -13,14 +13,14 @@ const pageContent = {
   image: "/images/image1.jpg",
 };
 
-const SecurityPage: React.FC = () => {
+const SecuritySection: React.FC = () => {
   return (
     <div className="min-h-screen w-full flex flex-col justify-center items-center bg-blue-300">
-      <h1>{pageContent.h1}</h1>
+      <h1>{sectionContent.h1}</h1>
       <div>
-        <p>{pageContent.text}</p>
+        <p>{sectionContent.text}</p>
         <div className="flex flex-wrap gap-4 justify-center">
-          {pageContent.features.map((card, index) => (
+          {sectionContent.features.map((card, index) => (
             <div key={index}>
               <p>{card}</p>
             </div>
@@ -29,8 +29,8 @@ const SecurityPage: React.FC = () => {
       </div>
       <div>
         <Image
-          src={pageContent.image}
-          alt={pageContent.h1}
+          src={sectionContent.image}
+          alt={sectionContent.h1}
           className="rounded-full"
           width={80}
           height={80}
@@ -41,4 +41,4 @@ const SecurityPage: React.FC = () => {
   );
 };
 
-export default SecurityPage;
+export default SecuritySection;
