@@ -40,9 +40,7 @@ function Navbar() {
               </Link>
             ))}
             <Link href="#email">
-              <button className="bg-gray-600 text-white py-2 px-4 rounded-md hover:bg-gray-700 transition">
-                Get Started
-              </button>
+              <Button buttonLabel={"Get Started"} />
             </Link>
           </div>
 
