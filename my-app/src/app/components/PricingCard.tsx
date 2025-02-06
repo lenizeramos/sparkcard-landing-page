@@ -19,7 +19,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
   buttonLabel,
 }) => {
   return (
-    <div className="border  border-white bg-white rounded-lg p-4 w-48 text-center flex-col">
+    <div className="border  border-white bg-white rounded-lg p-4 w-[90%] sm:w-60 text-center flex-col">
       <h2 className="text-xl font-semibold mb-2">{planName} Plan</h2>
       <p className="text-gray-500 mb-4">{targetAudience}</p>
 
