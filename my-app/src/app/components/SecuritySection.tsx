@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 
 const sectionContent = {
-  h1: "Security & Trust",
+  h2: "Security & Trust",
   text: "At SparkCard, we take your security seriously. Our state-of-the-art systems ensure your money and data are always protected.",
   features: [
     "Bank-level encryption",
@@ -16,7 +16,7 @@ const sectionContent = {
 const SecuritySection: React.FC = () => {
   return (
     <section className="min-h-screen w-full flex flex-col justify-center items-center bg-blue-300">
-      <h1>{sectionContent.h1}</h1>
+      <h2>{sectionContent.h2}</h2>
       <div>
         <p>{sectionContent.text}</p>
         <div className="flex flex-wrap gap-4 justify-center">
@@ -30,7 +30,7 @@ const SecuritySection: React.FC = () => {
       <div>
         <Image
           src={sectionContent.image}
-          alt={sectionContent.h1}
+          alt={sectionContent.h2}
           className="rounded-full"
           width={80}
           height={80}
