@@ -1,3 +1,5 @@
+> **Note:** This repository is a personal backup of coursework originally developed as part of my studies at Cornerstone College. It was cloned from a institutional and private repository to preserve my contributions and development history.
+
 # SparkCard Landing Page - Next.js
 
 ## Assignment Overview
@@ -48,4 +50,3 @@ The goal of this assignment is to create a **responsive landing page** using Nex
 
 ## 🖼️ **Final Screenshot of the Page**
 ![Final Page Screenshot](./docs/page.png)
-
